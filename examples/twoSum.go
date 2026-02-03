@@ -9,7 +9,7 @@ func twoSum(nums []int, target int) []int {
 
 	for i, num := range nums {
 		complement := target - num
-		if j, ok := numMap[complement]; ok {
+		if j, ok := numMap[complement]; ok { // Custom way to do an If Ok in this case is true is the value is in the map
 			return []int{j, i}
 		}
 		numMap[num] = i
